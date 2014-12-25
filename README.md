@@ -1,6 +1,6 @@
-# Java 程式設計世界哈囉！<br />Hello Java world!
-這是個最簡單的「Java 程式設計世界哈囉！」程式  
-[https://github.com/Vdragon/Hello_Java_world_](https://github.com/Vdragon/Hello_Java_world_)
+# Json 世界哈囉！<br />Hello Json world!
+這是個最簡單的「Json 世界哈囉！」程式  
+[https://github.com/Vdragon/Hello_Json_world_](https://github.com/Vdragon/Hello_Json_world_)
 
 ## 智慧財產授權條款
 Ｖ字龍放棄此專案的一切權利，將其釋出到公有領域(public domain)。
