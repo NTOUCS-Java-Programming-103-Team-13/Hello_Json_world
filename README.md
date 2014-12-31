@@ -25,4 +25,4 @@
 請參考 [軟體建構解決方案/](Build solutions/) 目錄下各軟體建構解決方案的說明文件。
 
 ## 專案目前的建構狀態
-[![Build Status](https://travis-ci.org/Vdragon/Hello_Java_world_.svg)](https://travis-ci.org/Vdragon/Hello_Java_world_)
+[![Build Status](https://travis-ci.org/Vdragon/Hello_Json_world_.svg)](https://travis-ci.org/Vdragon/Hello_Json_world_)
