@@ -58,4 +58,4 @@ format[21] = 22 - 1280x720
 ```
 
 ## 專案目前的建構狀態
-[![Build Status](https://travis-ci.org/Vdragon/Hello_Json_world_.svg)](https://travis-ci.org/Vdragon/Hello_Json_world_)
+[![Build Status](https://travis-ci.org/Vdragon/Hello_Json_world_.svg)](https://travis-ci.org/NTOUCS-Java-Programming-103-Team-13/Hello_Json_world_)
