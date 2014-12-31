@@ -1,18 +1,59 @@
 #!/bin/bash
-# 前一行為 shebang ，用來指定執行此腳本(script)程式的直譯器（如此例為 GNU bash 殼程式直譯器）
-# 以井字符號(#)開頭但非 shebang 的文字列是不會被執行的註解文字
+# 	宣告執行 script 程式用的殼程式(shell)的 shebang
+################## Header block ##################
+# Script程式名稱
+# Script Name
+#	軟體建構程式
+# 	build software program
+# 著作權宣告
+# Copyright Declaration
+# 	Ｖ字龍(Vdragon) <Vdragon.Taiwan@gmail.com> (c) 2014
+# 授權條款宣告
+# License Declaration
+# 	〈你的軟體的授權條款(License of your software)〉
+# 傳回值定義
+# Return Value Definition
+# 	0
+# 		正常結束
+# 已知問題
+# Known Issues
+# 	Known issues is now tracked on GitHub
+# 	
+# 修訂紀錄
+# Changelog
+# 	Changelog is now tracked using Git repostiory commit log
+# 	
+############## Header block ended ##############
 
-# buildSoftware.bash.sh - 軟體建構程式
-# 此程式會建構本軟體
-# 使用方式：
-# 	在命令列介面中切換當前工作目錄(current working directory)到本軟體建構解決方案根目錄下，然後執行下列命令：
-# 	$ bash buildSoftware.bash.sh
+######## Included files ########
 
-# 啟用 bash 殼程式直譯器的偵錯功能，方便看到腳本程式呼叫了什麼命令
-set -x
+######## Included files ended ########
 
-# 呼叫 Java 編譯器(javac)將 Java 來源程式碼編譯為 Java 虛擬機器能載入執行的 bytecode
-javac -d "Built software/" "../../Source code/Hello_Java_world_.java"
+######## File scope variable definitions ########
+# idea from http://www.kfirlavi.com/blog/2012/11/14/defensive-bash-programming/
+readonly PROGRAM_NAME="$(basename $0)"
+readonly PROGRAM_DIRECTORY="$(readlink -m $(dirname $0))"
+readonly PROGRAM_ARGUMENT_ORIGINAL_LIST="$@"
+readonly PROGRAM_ARGUMENT_ORIGINAL_NUMBER=$#
 
-# 回傳 0 結束狀態代碼， 0 代表正常結束程式
-exit 0
+project_global_directory="$(readlink -m "${PROGRAM_DIRECTORY}/../..")"
+
+######## File scope variable definitions ended ########
+
+######## Program ########
+# main function, program entry point
+# idea from http://www.kfirlavi.com/blog/2012/11/14/defensive-bash-programming/
+main() {
+	## 啟用除錯模式
+	set -x
+
+	find "${project_global_directory}/Source code" -name "*.java" -exec javac -d "Built software/" -sourcepath "${project_global_directory}/Source code" {} \;
+	
+	## 停用除錯模式
+	set +x
+
+	## 正常結束 script 程式
+	exit 0
+}
+main
+######## Program ended ########
