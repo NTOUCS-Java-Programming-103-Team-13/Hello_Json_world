@@ -14,12 +14,12 @@ public class Main_program{
 	/** public static void main() 為 Java 程式的進入點(entry point)子程式
 	 *  @param args 保存命令列參數的字串陣列，注意第一個命令列參數位於 0 索引值 */
 	public static void main(String[] args){
-		String json_data = new String("");
-		Scanner standard_input_scanner = new Scanner(System.in);
-		
 		System.out.println("Json 世界哈囉！");
 		System.out.println("－－－－－－－－－－－");
 		System.out.println("請輸入 Json 格式資料，輸入完請按 end of file(EOF) 組合按鍵：");
+		
+		String json_data = new String("");
+		Scanner standard_input_scanner = new Scanner(System.in);
 		
 		while(standard_input_scanner.hasNext()){
 			json_data += standard_input_scanner.next();
