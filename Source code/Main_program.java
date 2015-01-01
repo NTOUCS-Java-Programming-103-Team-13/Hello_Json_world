@@ -20,8 +20,9 @@ public class Main_program{
 		System.out.println("Json 世界哈囉！");
 		System.out.println("－－－－－－－－－－－");
 		System.out.println("請輸入 Json 格式資料，輸入完請按 end of file(EOF) 組合按鍵：");
-		while(standard_input_scanner.hasNextLine()){
-			json_data += standard_input_scanner.nextLine();
+		
+		while(standard_input_scanner.hasNext()){
+			json_data += standard_input_scanner.next();
 		}
 		standard_input_scanner.close();
 		
