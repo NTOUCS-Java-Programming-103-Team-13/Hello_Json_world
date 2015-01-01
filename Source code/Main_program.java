@@ -4,8 +4,8 @@
     @author Ｖ字龍(Vdragon)
     @copyright Ｖ字龍放棄此專案的一切權利，將其釋出到公有領域(public domain)。 */
 
-import org.json.*;
 import java.util.Scanner;
+import org.json.*;
 
 /** Main_program 物件類別(class)
 
