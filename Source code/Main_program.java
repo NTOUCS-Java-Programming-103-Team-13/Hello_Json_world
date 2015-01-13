@@ -4,7 +4,9 @@
     @author Ｖ字龍(Vdragon)
     @copyright Ｖ字龍放棄此專案的一切權利，將其釋出到公有領域(public domain)。 */
 
+import java.util.Iterator;
 import java.util.Scanner;
+
 import org.json.*;
 
 /** Main_program 物件類別(class)
@@ -33,6 +35,13 @@ public class Main_program{
 		JSONArray test_json_array = test_json_object.getJSONArray("formats");
 		for(int array_index = 0; array_index < test_json_array.length(); ++array_index){
 			System.out.println("format[" + array_index + "] = " + test_json_array.getJSONObject(array_index).get("format"));
+		}
+		
+		if(test_json_object.get("subtitles") != null){
+			JSONObject subtitle_object = test_json_object.getJSONObject("subtitles");
+			for(Iterator<String> i = subtitle_object.keys(); i.hasNext(); ){
+				System.out.println(i.next());
+			}
 		}
 		
 		test_json_array = null;
