@@ -9,7 +9,6 @@ import java.util.Scanner;
 import java.io.*;
 
 import org.json.*;
-import org.apache.commons.io.*;
 
 /** Main_program 物件類別(class)
 
