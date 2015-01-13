@@ -18,7 +18,7 @@ public class Main_program{
 	public static void main(String[] args){
 		System.out.println("Json 世界哈囉！");
 		System.out.println("－－－－－－－－－－－");
-		System.out.println("請輸入 Json 格式資料，輸入完請按 end of file(EOF) 組合按鍵：");
+		System.out.println("請輸入 youtube-dl 輸出的 Json 格式資料，輸入完請按 end of file(EOF) 組合按鍵（類 Unix 系統為 Ctrl+D，Microsoft Windows 作業系統為 Ctrl+Z）：");
 		
 		String json_data = new String("");
 		Scanner standard_input_scanner = new Scanner(System.in);
