@@ -53,8 +53,8 @@ public class Main_program{
 			for(int array_index = 0; array_index < test_json_array.length(); ++array_index){
 				System.out.println("format[" + array_index + "] = " + test_json_array.getJSONObject(array_index).get("format"));
 			}
-
-			if(test_json_object.get("subtitles") != null){
+			
+			if(test_json_object.isNull("subtitles") == false){
 				JSONObject subtitle_object = test_json_object.getJSONObject("subtitles");
 				for(Iterator<String> i = subtitle_object.keys(); i.hasNext(); ){
 					System.out.println(i.next());
