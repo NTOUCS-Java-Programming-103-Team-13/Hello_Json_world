@@ -47,7 +47,7 @@ main() {
 	## 啟用除錯模式
 	set -x
 
-	find "${project_global_directory}/Source code" -name "*.java" -exec javac -d "Built software/" -sourcepath "${project_global_directory}/Source code" {} \;
+	find "${project_global_directory}/Source code" -name "*.java" -exec javac -encoding UTF-8 -d "Built software/" -sourcepath "${project_global_directory}/Source code" {} \;
 	
 	## 停用除錯模式
 	set +x
